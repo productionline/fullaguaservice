@@ -134,7 +134,7 @@ const initMainCarousel = () => {
 
   const totalImages = 5;
   const basePath = 'img/ejemplo';
-  const extension = '.webp';
+  const extension = '.png';
 
   for (let i = 1; i <= totalImages; i++) {
     const img = document.createElement('img');
@@ -244,7 +244,7 @@ const initFloatingTools = () => {
   function createTool() {
     const tool = document.createElement('img');
     tool.className = 'floating-tool';
-    tool.src = 'favicon-192.webp';
+    tool.src = 'favicon-192.png';
     tool.width = 50;
     tool.height = 50;
     tool.style.left = Math.random() * 95 + 'vw';
