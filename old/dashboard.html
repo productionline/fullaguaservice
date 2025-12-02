@@ -367,11 +367,6 @@
       color: var(--primary);
       border: 1px solid var(--primary);
     }
-.badge.instagram {
-  background: rgba(228, 64, 95, 0.2);
-  color: #E4405F;
-  border: 1px solid #E4405F;
-}
 
     .loading {
       text-align: center;
@@ -496,7 +491,7 @@
 
       <!-- CLICKS DE CONTACTO -->
       <section class="data-section">
-        <h2 class="section-title">📞 Clicks de Contacto (WhatsApp/Facebook/Instagram)</h2>
+        <h2 class="section-title">📞 Clicks de Contacto (WhatsApp/Facebook)</h2>
         <div class="table-container">
           <table>
             <thead>
@@ -673,18 +668,13 @@
         }
         
         tbody.innerHTML = data.map(contact => `
-  <tr>
-    <td>${formatDate(contact.clicked_at)}</td>
-    <td><span class="badge ${contact.contact_type}">${
-      contact.contact_type === 'whatsapp' ? '📱 WhatsApp' : 
-      contact.contact_type === 'facebook' ? '📘 Facebook' : 
-      contact.contact_type === 'instagram' ? '📸 Instagram' : 
-      contact.contact_type
-    }</span></td>
-    <td>${formatLocation(contact.button_location)}</td>
-    <td style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">${contact.target_url || 'N/A'}</td>
-  </tr>
-`).join('');
+          <tr>
+            <td>${formatDate(contact.clicked_at)}</td>
+            <td><span class="badge ${contact.contact_type}">${contact.contact_type === 'whatsapp' ? '📱 WhatsApp' : '📘 Facebook'}</span></td>
+            <td>${formatLocation(contact.button_location)}</td>
+            <td style="font-size: 0.85rem; color: rgba(255,255,255,0.6);">${contact.target_url || 'N/A'}</td>
+          </tr>
+        `).join('');
       } catch (error) {
         console.error('Error cargando contactos:', error);
         document.getElementById('contactsTable').innerHTML = '<tr><td colspan="4" class="no-data">Error al cargar datos</td></tr>';
@@ -774,11 +764,10 @@
 
     function getPlatformIcon(platform) {
       const platforms = {
-  'whatsapp': '📱 WhatsApp',
-  'facebook': '📘 Facebook',
-  'instagram': '📸 Instagram',
-  'copy_link': '🔗 Copiar Link'
-};
+        'whatsapp': '📱 WhatsApp',
+        'facebook': '📘 Facebook',
+        'copy_link': '🔗 Copiar Link'
+      };
       return platforms[platform] || platform;
     }
   </script>
