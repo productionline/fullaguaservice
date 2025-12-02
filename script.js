@@ -326,10 +326,42 @@ function copyLink() {
     console.error('Error al copiar:', err);
   });
 }
+// === FAQ ACCORDION ===
+const initFAQ = () => {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      const answer = question.nextElementSibling;
+      
+      // Cerrar todas las demás preguntas (opcional - comenta estas líneas si quieres múltiples abiertas)
+      faqQuestions.forEach(q => {
+        if (q !== question) {
+          q.setAttribute('aria-expanded', 'false');
+          q.nextElementSibling.classList.remove('active');
+        }
+      });
+      
+      // Toggle de la pregunta actual
+      question.setAttribute('aria-expanded', !isExpanded);
+      answer.classList.toggle('active');
+    });
+    
+    // Accesibilidad: permitir usar Enter y Espacio
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        question.click();
+      }
+    });
+  });
+};
 // === INICIALIZACIÓN ===
 document.addEventListener('DOMContentLoaded', () => {
   initMainCarousel();
   initProblemsCarousel();
   initFloatingTools();
   initPodcast();
+  initFAQ(); // ← AGREGAR ESTA LÍNEA
 });
