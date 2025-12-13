@@ -851,3 +851,40 @@ footer {
     font-size: 0.95rem;
   }
 }
+/* === SECCIONES CON FONDO DIFERENCIADO (Sobre Nosotros, Trabajos, FAQ) === */
+
+/* 1. Modo Oscuro (Por defecto) */
+#sobre-nosotros, 
+#trabajos, 
+#faq {
+  background: rgba(15, 15, 25, 0.5); /* Oscuro sutil */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* 2. Modo Claro (Luminoso y Limpio) */
+.light-mode #sobre-nosotros, 
+.light-mode #trabajos, 
+.light-mode #faq {
+  /* Fondo blanco semitransparente (Efecto cristal limpio) */
+  background: rgba(255, 255, 255, 0.7); 
+  
+  /* Bordes suaves para separar del fondo grisáceo */
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  
+  /* Sombra suave para dar profundidad */
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.05);
+}
+
+/* Ajuste específico para textos dentro de estas secciones en modo claro */
+.light-mode #sobre-nosotros p,
+.light-mode #trabajos p,
+.light-mode #faq p {
+  color: #333; /* Gris oscuro para lectura fácil */
+}
+
+.light-mode #sobre-nosotros h3 {
+  color: #0056b3; /* Los subtítulos en azul fuerte */
+}
