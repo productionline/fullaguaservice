@@ -31,9 +31,31 @@
             background-repeat: no-repeat;
         }
         
-        @media (max-aspect-ratio: 1/1) {
+        /* Tablets en vertical y celulares */
+        @media (max-width: 768px) {
             .background {
                 background-image: url('cortina2.png');
+            }
+        }
+        
+        /* Celulares en horizontal */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .background {
+                background-image: url('cortina1.png');
+            }
+        }
+        
+        /* Pantallas muy anchas (ultra wide) */
+        @media (min-aspect-ratio: 21/9) {
+            .background {
+                background-size: contain;
+            }
+        }
+        
+        /* Pantallas muy altas */
+        @media (max-aspect-ratio: 9/16) {
+            .background {
+                background-size: 100% auto;
             }
         }
         
