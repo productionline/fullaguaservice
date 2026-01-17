@@ -1,162 +1,560 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aguas del Este - Contacto</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #000;
-        }
-        
-        .background {
-            width: 100%;
-            height: 100%;
-            background-image: url('cortina1.png');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-        
-        /* Tablets en vertical y celulares */
-        @media (max-width: 768px) {
-            .background {
-                background-image: url('cortina2.png');
-            }
-        }
-        
-        /* Celulares en horizontal */
-        @media (max-height: 500px) and (orientation: landscape) {
-            .background {
-                background-image: url('cortina1.png');
-            }
-        }
-        
-        /* Pantallas muy anchas (ultra wide) */
-        @media (min-aspect-ratio: 21/9) {
-            .background {
-                background-size: contain;
-            }
-        }
-        
-        /* Pantallas muy altas */
-        @media (max-aspect-ratio: 9/16) {
-            .background {
-                background-size: 100% auto;
-            }
-        }
-        
-        .countdown-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px 20px;
-            border-radius: 10px;
-            border: 2px solid #ff0000;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-            z-index: 1000;
-        }
-        
-        .countdown-title {
-            color: #ff0000;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .countdown {
-            color: #ff0000;
-            font-family: 'Courier New', monospace;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-        }
-        
-        .warning {
-            color: #ff6666;
-            font-family: Arial, sans-serif;
-            font-size: 11px;
-            text-align: center;
-            margin-top: 8px;
-            font-style: italic;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detección de Fugas, Humedad, Goteras | Sanitaria Urgente en Uruguay | Full Agua</title>
+  <meta name="description" content="Expertos en Detección de Fugas, Goteras, Humedades y baja presión en Uruguay. Sanitaria sin romper paredes con Infrarrojos y Geófonos. ¡Presupuesto sin costo!" />
+  <link rel="canonical" href="https://aguasdeleste.com.uy/" />
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aguasdeleste.com.uy/" />
+  <meta property="og:title" content="Detección de Fugas, Humedad, Goteras | Sanitaria Urgente en Uruguay | Full Agua" />
+  <meta property="og:description" content="Expertos en Detección de Fugas, Goteras, Humedades y baja presión en Uruguay. ¡Presupuesto sin costo!" />
+  <meta property="og:image" content="https://aguasdeleste.com.uy/logo.webp" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:locale" content="es_UY" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://aguasdeleste.com.uy/" />
+  <meta name="twitter:title" content="Detección de Fugas, Humedad, Goteras | Sanitaria Urgente en Uruguay | Full Agua" />
+  <meta name="twitter:description" content="Expertos en Detección de Fugas, Goteras, Humedades y baja presión en Uruguay. ¡Presupuesto sin costo!" />
+  <meta name="twitter:image" content="https://aguasdeleste.com.uy/logo.webp" />
+  <!-- Código corregido para Google -->
+<link rel="icon" href="https://aguasdeleste.com.uy/favicon-192.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="https://aguasdeleste.com.uy/apple-touch-icon.webp" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.webp" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
-        @media (max-width: 768px) {
-            .countdown-container {
-                top: 10px;
-                right: 10px;
-                padding: 10px 15px;
-            }
-            
-            .countdown-title {
-                font-size: 12px;
-            }
-            
-            .countdown {
-                font-size: 18px;
-            }
-            
-            .warning {
-                font-size: 9px;
-            }
-        }
-    </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JL68YY9XCX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JL68YY9XCX');
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Full Agua Service",
+    "image": "https://aguasdeleste.com.uy/logo.webp",
+    "@id": "https://aguasdeleste.com.uy/",
+    "url": "https://aguasdeleste.com.uy/",
+    "telephone": "+59899240281",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Las Heras 364",
+      "addressLocality": "Montevideo",
+      "addressRegion": "Montevideo",
+      "addressCountry": "UY"
+    },
+    "hasMap": "https://www.google.com/maps/search/Las+Heras+364+Montevideo",
+    "priceRange": "Consultar",
+    "areaServed": {
+      "@type": "State",
+      "name": "Uruguay"
+    },
+    "knowsAbout": "Detección de Fugas de Agua, Humedad, Goteras, Baja Presión, Sanitaria, Sanitarios",
+    "serviceType": "Plumber",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "25"
+    }
+  }
+  </script>
+
+  <!-- Enlace al CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="background"></div>
+<body class="dark-mode">
+  <div id="tsparticles"></div>
+  <div id="floating-tools-container"></div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#"><img src="logo.webp" alt="Full Agua Service" class="logo" width="95" height="90" loading="lazy"></a>
+    <div class="share-buttons-header">
+      <span class="share-label">Compartir</span>
+      <button class="share-btn" onclick="shareToWhatsApp()" aria-label="Compartir en WhatsApp" title="Compartir este sitio por WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </button>
+      <button class="share-btn" onclick="shareToFacebook()" aria-label="Compartir en Facebook" title="Compartir este sitio en Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+      </button>
+      <button class="share-btn" onclick="copyLink()" aria-label="Copiar enlace" title="Copiar el enlace del sitio al portapapeles">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+      </button>
+    </div>
+    <div class="nav-controls">
+      <button class="theme-toggle" id="themeToggle">☀️</button>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <ul class="nav-links">
+  <li><a href="#servicios">Servicios</a></li>
+  <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+  <li><a href="#proyectos">Proyectos</a></li>
+  <li><a href="#trabajos">Reparaciones</a></li>
+  <li><a href="#faq">FAQ</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+</ul>
+  </nav>
+
+  <main>
+    <header>
+      <div class="hero-background" style="background-image: url('https://github.com/aleotromundo/prueba/blob/main/img/ejemplo.jpeg');"></div>
+      <div class="hero-content">
+        <h1>Detectamos pérdidas de agua invisibles</h1>
+        <p class="hero-text">Profesionales con tecnología de punta para resolver fugas, humedades, baja presión y más — sin romper paredes.</p>
+        <a href="https://wa.me/59899240281" class="btn btn-cta" rel="noopener">Presupuesto sin costo</a>
+        <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+      </div>
+      <!-- Botón flotante del podcast -->
+      <div class="podcast-floating-btn" id="podcastBtn" role="button" tabindex="0" aria-label="Reproducir podcast explicativo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <span id="podcastBtnText">Podcast Explicativo</span>
+      </div>
+      <audio id="podcastAudio" src="audio/podcast.mp3" preload="metadata"></audio>
+    </header>
+
+    <!-- Carrusel: Soluciones Profesionales -->
+    <section id="carrusel-problemas">
+      <div class="section-container" style="max-width: 800px; margin-top: 2rem;">
+        <h2 class="section-title">Soluciones Profesionales</h2>
+        <div class="carousel-container">
+          <div class="carousel-track" id="problemsTrack"></div>
+          <button class="carousel-btn prev" id="prevProblemsBtn" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-btn next" id="nextProblemsBtn" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <p style="text-align: center; margin-top: 1.5rem; font-style: italic; opacity: 0.8;">
+          Ante cualquier inconveniente relacionado con el agua, no dude en consultarnos. ¡Tenemos la solución!
+        </p>
+      </div>
+    </section>
+
+    <section id="galeria-demo">
+      <div class="section-container" style="max-width: 800px;">
+        <h2 class="section-title">Tecnología de Detección. Solución Total</h2>
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+        <p style="text-align: center; margin-top: 1.5rem; font-style: italic; opacity: 0.8;">
+          Utilizamos Geófonos y Cámaras Termográficas para encontrar el lugar exacto de la fuga, ¡sin romper paredes ni pisos!
+        </p>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="section-container">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services">
+          <div class="service-card clickable-card" data-modal="banos">
+            <div class="service-icon"><img src="icon_4.webp" alt="Baños" width="50" height="50" loading="lazy"></div>
+            <h3>Baños y Caños</h3>
+            <p>Instalación y reparación profesional en hogares y empresas.</p>
+            <div class="read-more-overlay">Leer más</div>
+          </div>
+          <div class="service-card clickable-card" data-modal="infrarrojos">
+            <div class="service-icon"><img src="icon_5.webp" alt="Cámaras" width="50" height="50" loading="lazy"></div>
+            <h3>Cámara de Infrarrojos</h3>
+            <p>Detección precisa de fugas ocultas sin dañar tu propiedad.</p>
+            <div class="read-more-overlay">Leer más</div>
+          </div>
+          <div class="service-card clickable-card" data-modal="humedad">
+            <div class="service-icon"><img src="icon_6.webp" alt="Humedades" width="50" height="50" loading="lazy"></div>
+            <h3>Causas de Humedad</h3>
+            <p>Diagnóstico y solución integral de humedades estructurales.</p>
+            <div class="read-more-overlay">Leer más</div>
+          </div>
+          <div class="service-card clickable-card" data-modal="presion">
+            <div class="service-icon"><img src="icon_8.webp" alt="Presión" width="50" height="50" loading="lazy"></div>
+            <h3>Poca Presión de Agua</h3>
+            <p>Análisis y reparación para recuperar el flujo óptimo.</p>
+            <div class="read-more-overlay">Leer más</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-nosotros">
+      <div class="section-container">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <p class="hero-text" style="font-size: 1.2rem;">Más de 40 años de experiencia en la industria.</p>
+          <p>Trabaje con nosotros y obtenga los beneficios más avanzados y las mejores características del sector. Nuestra amplia experiencia asegura que recibirá la ayuda que necesita. Simplemente contacte a nuestro equipo y estaremos listos para asistirlo.</p>
+          <div style="margin-top: 2rem;">
+            <h3 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;">Llámenos</h3>
+            <p style="font-size: 1.2rem; font-weight: 600;">2682 6328 — <a href="tel:+59899240281" style="color: var(--text);">099 240 281</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="section-container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="projects">
+          <div class="project-card">
+            <img src="bano-chile.webp" alt="Baño moderno" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Baño moderno</div>
+          </div>
+          <div class="project-card">
+            <img src="regadio2.webp" alt="Sistema de riego" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Sistema de riego</div>
+          </div>
+          <div class="project-card">
+            <img src="nueva_343.webp" alt="Termofusión de cañerías" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Termofusión de cañerías</div>
+          </div>
+          <div class="project-card">
+            <img src="maquina-de-geofono.webp" alt="Detección con geófono" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Detección con geófono</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="section-container">
+        <div class="cta-section">
+          <h2>¿Necesita soluciones de sanitaria confiables?</h2>
+          <p class="hero-text" style="margin-bottom: 2rem;">Estamos aquí para ayudarle con cualquier problema, grande o pequeño.</p>
+          <a href="https://wa.me/59899240281" class="btn btn-cta" rel="noopener">Pedir Presupuesto gratis</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabajos" style="background: rgba(10,10,18,0.3);">
+      <div class="section-container">
+        <h2 class="section-title">Trabajos realizados</h2>
+        <div class="projects">
+          <div class="project-card">
+            <img src="img/trabajos1.webp" alt="Trabajo realizado 1" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Fuga invisible reparada</div>
+          </div>
+          <div class="project-card">
+            <img src="img/trabajos2.webp" alt="Trabajo realizado 2" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Filtración en piscina reparada</div>
+          </div>
+          <div class="project-card">
+            <img src="img/trabajos3.webp" alt="Trabajo realizado 3" width="280" height="280" loading="lazy">
+            <div class="project-overlay">Humedad en paredes reparada</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Sección FAQ -->
+<section id="faq" style="background: rgba(10,10,18,0.3);">
+  <div class="section-container">
+    <h2 class="section-title">Resolvemos tus dudas</h2>
+    <p class="hero-text" style="text-align: center; margin-bottom: 2rem;">Preguntas Frecuentes</p>
     
-    <div class="countdown-container">
-        <div class="countdown" id="countdown">30:00:00:00</div>
+    <div class="faq-container">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cómo detectan las fugas sin romper paredes?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Utilizamos tecnología avanzada como cámaras termográficas infrarrojas y geófonos electrónicos que nos permiten localizar con precisión el origen de la fuga sin necesidad de realizar perforaciones o daños en paredes, techos o pisos. Esto ahorra tiempo, dinero y preserva la estética de tu hogar.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cuánto tiempo tarda la detección de una fuga?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Dependiendo de la complejidad del caso, generalmente podemos identificar el origen de una fuga en 1 a 3 horas. Una vez detectada, procedemos con la reparación inmediata si el cliente lo autoriza, o entregamos un presupuesto detallado.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+  <button class="faq-question" aria-expanded="false">
+    <span>¿Atienden emergencias de sanitaria?</span>
+    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+        <div class="faq-answer">
+    <p>Sí, atendemos emergencias de sanitaria. Sabemos que una fuga o problema de agua puede ser urgente y causar daños importantes, por eso priorizamos este tipo de casos. Contáctanos por WhatsApp al 099 240 281 para coordinar una visita rápida.</p>
+  </div>
+</div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿El presupuesto tiene algún costo?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>No, ofrecemos presupuestos totalmente gratuitos y sin compromiso. Nos desplazamos a tu domicilio, evaluamos el problema y te entregamos un presupuesto detallado sin costo alguno. Solo pagas si decides contratar nuestros servicios.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué causa la baja presión de agua en casa?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Las causas más comunes son: acumulación de sarro en cañerías, válvulas parcialmente cerradas, fugas no visibles en el sistema, obstrucciones por sedimentos, o problemas en el regulador de presión. Realizamos un diagnóstico completo para identificar y solucionar el origen del problema.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cómo sé si tengo una fuga oculta?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Señales comunes incluyen: aumento inexplicable en la factura de agua, manchas de humedad en paredes o techos, sonido de agua corriendo cuando todo está cerrado, pisos húmedos sin razón aparente, o moho recurrente. Si notas alguno de estos signos, es importante realizar una inspección profesional.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Trabajan en toda la zona de Uruguay?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+  <p>Nuestra base de operaciones principal cubre toda la zona Este: Punta del Este, Punta Ballena, Piriápolis, Maldonado y Rocha, con atención inmediata y sin costo adicional de traslado. Para otras zonas de Uruguay, también brindamos servicio según la complejidad del trabajo. ¡Consultanos sin compromiso para evaluar tu caso!</p>
+</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Ofrecen garantía en los trabajos realizados?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutamente. Todos nuestros trabajos cuentan con garantía por escrito. La duración de la garantía varía según el tipo de servicio, pero respaldamos la calidad de nuestro trabajo y los materiales utilizados. Tu tranquilidad es nuestra prioridad.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué formas de pago aceptan?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Aceptamos efectivo, transferencias bancarias y tarjetas de débito/crédito. También ofrecemos facilidades de pago para trabajos de mayor envergadura. Consulta con nuestro equipo las opciones disponibles según tu caso particular.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Dónde puedo solicitar más información?</span>
+          <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Puedes contactarnos a través de WhatsApp al 099 240 281, llamarnos al 2682 6328, o escribirnos a hmachado376@gmail.com. También puedes usar los botones de contacto en nuestro sitio web. ¡Estamos listos para ayudarte!</p>
+        </div>
+      </div>
     </div>
 
-    <script>
-        // Fecha de expiración: 30 días desde ahora
-        const expireDate = new Date();
-        expireDate.setDate(expireDate.getDate() + 30);
-        
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = expireDate.getTime() - now;
-            
-            if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '00:00:00:00';
-                document.querySelector('.warning').innerHTML = 'SITIO EXPIRADO';
-                return;
-            }
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById('countdown').innerHTML = 
-                String(days).padStart(2, '0') + ':' +
-                String(hours).padStart(2, '0') + ':' +
-                String(minutes).padStart(2, '0') + ':' +
-                String(seconds).padStart(2, '0');
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
+    <div style="text-align:center; margin-top:3rem;">
+      <p class="hero-text" style="margin-bottom: 1rem;">¿No encuentras la respuesta que buscas?</p>
+      <a href="https://wa.me/59899240281" class="btn btn-cta" rel="noopener">Contáctanos ahora</a>
+    </div>
+  </div>
+</section>
+
+    <section id="contacto">
+      <div class="section-container">
+        <h2 class="section-title">Contáctenos</h2>
+        <address class="contact-info">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:hmachado376@gmail.com" style="color:var(--text); text-decoration: none;">hmachado376@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Las Heras 364 — Uruguay</span>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span><a href="https://wa.me/59899240281" rel="noopener" style="color:var(--text); text-decoration: none;">099 240 281</a></span>
+          </div>
+        </address>
+        <div style="text-align:center; margin-top:2rem;">
+          <a href="https://wa.me/59899240281" class="btn btn-cta" rel="noopener">Solicitar presupuesto sin costo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <a href="#"><img src="logo.webp" alt="Full Agua Service" class="footer-logo" width="180" height="80" loading="lazy"></a>
+      <p>Soluciones de sanitaria confiables y profesionales en Uruguay.</p>
+      <address>
+        <p>Las Heras 364 — Uruguay</p>
+        <p>Teléfono: <a href="tel:+59899240281" style="color: inherit; text-decoration: none;">099 240 281</a></p>
+      </address>
+      <div class="footer-qr-container">
+        <img src="fasqr.webp" alt="Código QR para contactar a Full Agua Service por WhatsApp" width="120" height="120" loading="lazy">
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/1Ccj5wYhuK/" target="_blank" rel="noopener" aria-label="Facebook" title="Visita nuestra página de Facebook">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+        </a>
+        <a href="https://wa.me/59899240281" target="_blank" rel="noopener" aria-label="WhatsApp" title="Enviar WhatsApp a Full Agua Service">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12.011719 2C6.5057187 2 2.0234844 6.478375 2.0214844 11.984375C2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562L2 22l5.2324219-1.236328C8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516h.003906C17.514766 21.978516 21.995047 17.499141 21.998047 11.994141S17.514766 2 12.011719 2zM8.4765625 7.375c-.167 0-.437.0625-.666.3125s-.946 1.1020781-.946 2.3300781s.9-2.832031 1.024 2.9990231c.124.166 1.7266719 2.765625 4.2636719 3.765625C14.32675 16.946234 14.754891 16.782234 15.212891 16.740234c.458-.041 1.477547-.602547 1.685547-1.185547s.21-.6885.148-7.918c-.062-.104-.2285-.166-.4785-.291s-1.227-.6025-1.456-.6855c-.229-.083-.3965-.125-.5625.125s-.637.76-.783 1.083c-.146.167-.291.1895-.541.0645s-1.093-.396-2.047-1.246c-.742-.661-1.242-1.4765-1.388-1.7265s.131-.237.256-.362c.112-.112.248-.2915.373-.4375s.042-.104 0-.146c-.042-.042-.396-.9475-.542-1.3125c-.167-.344-.333-.354-.488-.362z"/></svg>
+        </a>
+        <a href="#" onclick="shareToWhatsApp(); return false;" aria-label="Compartir en WhatsApp" title="Compartir este sitio por WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="#" onclick="shareToFacebook(); return false;" aria-label="Compartir en Facebook" title="Compartir este sitio en Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+        </a>
+        <a href="#" onclick="copyLink(); return false;" aria-label="Copiar enlace" title="Copiar el enlace del sitio al portapapeles">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </a>
+      </div>
+      <p>&copy; 2025 Full Agua Service. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="floating-buttons">
+    <a href="https://www.instagram.com/p/DQrgQrRgMFE/?igsh=MWN3YnlkZmh2dzA2cw=="
+   class="floating-btn instagram"
+   target="_blank"
+   rel="noopener"
+   aria-label="Ir a Instagram"
+   title="Síguenos en Instagram"
+   onclick="event.preventDefault(); trackContactClick('instagram', 'floating_button', this.href).then(() => window.open(this.href, '_blank')); return false;">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/share/1Ccj5wYhuK/" class="floating-btn facebook" target="_blank" rel="noopener" aria-label="Ir a Facebook" title="Visita nuestra página de Facebook">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/></svg>
+    </a>
+    <a href="https://wa.me/59899240281" class="floating-btn whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" title="WhatsApp Urgente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <!-- Modales -->
+  <div class="modal" id="modal-banos">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('banos')">&times;</button>
+      <h2>Baños y Caños</h2>
+      <p>Ofrecemos soluciones integrales para la instalación, renovación y reparación de baños en hogares y empresas. Trabajamos con materiales de primera calidad y garantizamos acabados impecables.</p>
+      <img src="bano-chile.webp" alt="Baño" loading="lazy">
+      <p>Nuestros servicios incluyen:</p>
+      <ul style="padding-left:1.5rem; margin:1rem 0;">
+        <li>Reemplazo de sanitarios y griferías</li>
+        <li>Instalación de duchas y bañeras</li>
+        <li>Rediseño completo de baños</li>
+        <li>Soluciones anti-humedad en paredes y pisos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-infrarrojos">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('infrarrojos')">&times;</button>
+      <h2>Cámara de Infrarrojos</h2>
+      <p>Utilizamos tecnología térmica avanzada para detectar fugas de agua ocultas en paredes, techos y pisos sin necesidad de perforar ni romper superficies.</p>
+      <img src="img/ejemplo2.webp" alt="Geófono" loading="lazy">
+      <p>Beneficios:</p>
+      <ul style="padding-left:1.5rem; margin:1rem 0;">
+        <li>Diagnóstico preciso en minutos</li>
+        <li>Ahorro en reparaciones innecesarias</li>
+        <li>Protección de tus acabados y muebles</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-humedad">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('humedad')">&times;</button>
+      <h2>Causas de Humedad</h2>
+      <p>Identificamos el origen real de las humedades: filtraciones, condensación, capilaridad o fugas internas. No nos limitamos a pintar: resolvemos la raíz del problema.</p>
+      <img src="plomero.webp" alt="Plomero" loading="lazy">
+      <p>Nuestro enfoque incluye:</p>
+      <ul style="padding-left:1.5rem; margin:1rem 0;">
+        <li>Análisis con humedímetros profesionales</li>
+        <li>Inspección con cámaras endoscópicas</li>
+        <li>Soluciones personalizadas según el tipo de humedad</li>
+        <li>Garantía por escrito en todos los trabajos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-presion">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('presion')">&times;</button>
+      <h2>Poca Presión de Agua</h2>
+      <p>¿El agua sale débil en tu ducha o cocina? Diagnosticamos y solucionamos problemas en la red domiciliaria, válvulas, filtros o reguladores de presión.</p>
+      <img src="roseta-de-agua-ducha.webp" alt="Ducha" loading="lazy">
+      <p>Tratamos causas como:</p>
+      <ul style="padding-left:1.5rem; margin:1rem 0;">
+        <li>Obstrucciones por sarro o sedimentos</li>
+        <li>Válvulas parcialmente cerradas</li>
+        <li>Problemas en la red municipal</li>
+        <li>Fugas no visibles que reducen la presión</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scripts externos -->
+  <script src="supabase.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
