@@ -124,9 +124,6 @@
     document.getElementById('pweb-close').addEventListener('click', function(e) { e.stopPropagation(); close(); });
     wrap.addEventListener('mouseenter', open);
     wrap.addEventListener('mouseleave', function(e) { if (!e.relatedTarget || !wrap.contains(e.relatedTarget)) close(); });
-    // Auto-abrir a los 9 segundos
-    setTimeout(open, 9000);
-
     if ('IntersectionObserver' in window) {
       const sentinel = document.createElement('div');
       sentinel.style.cssText = 'position:absolute;bottom:0;left:0;width:1px;height:1px;pointer-events:none;';
