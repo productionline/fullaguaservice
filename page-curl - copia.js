@@ -1,5 +1,5 @@
 // ============================================================
-// PAGE CURL — otromundo
+// PAGE CURL — Promo Páginas Web
 // Incluir al final del <body> en cada página.
 // ============================================================
 (function() {
@@ -16,18 +16,18 @@
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 110px;
-      height: 110px;
+      width: 100px;
+      height: 100px;
       z-index: 9998;
       cursor: pointer;
-      filter: drop-shadow(4px -4px 12px rgba(0,0,0,0.35));
+      filter: drop-shadow(4px -4px 10px rgba(0,0,0,0.4));
       transition: width 0.5s cubic-bezier(0.4,0,0.2,1),
                   height 0.5s cubic-bezier(0.4,0,0.2,1);
     }
 
     #pweb-wrap.open {
-      width: 320px;
-      height: 320px;
+      width: 300px;
+      height: 300px;
     }
 
     #pweb-svg {
@@ -38,15 +38,19 @@
 
     #pweb-thumb {
       position: absolute;
-      bottom: 16px;
-      left: 16px;
-      width: 50px;
-      height: 50px;
+      bottom: 14px;
+      left: 14px;
+      width: 38px;
+      height: 38px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: opacity 0.2s;
       pointer-events: none;
+    }
+
+    #pweb-thumb svg {
+      width: 100%; height: 100%;
     }
 
     #pweb-wrap.open #pweb-thumb {
@@ -61,12 +65,11 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-      padding: 22px 24px;
-      gap: 8px;
+      padding: 22px 28px;
+      gap: 10px;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease 0.2s;
-      box-sizing: border-box;
     }
 
     #pweb-wrap.open #pweb-content {
@@ -74,28 +77,9 @@
       pointer-events: auto;
     }
 
-    #pweb-logo-row {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      margin-bottom: 2px;
-    }
-
-    #pweb-brand-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      background: linear-gradient(90deg, #00ffff, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-    }
-
     #pweb-badge {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.5rem;
+      font-size: 0.55rem;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -109,11 +93,11 @@
 
     #pweb-headline {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.88rem;
+      font-size: 0.95rem;
       font-weight: 700;
       line-height: 1.3;
       color: #fff;
-      max-width: 210px;
+      max-width: 200px;
     }
 
     #pweb-headline span {
@@ -125,10 +109,10 @@
 
     #pweb-sub {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.6rem;
-      color: rgba(255,255,255,0.6);
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.65);
       line-height: 1.4;
-      max-width: 220px;
+      max-width: 210px;
     }
 
     #pweb-cta {
@@ -139,26 +123,27 @@
       background: linear-gradient(135deg, #0ff 0%, #a855f7 100%);
       color: #000;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.62rem;
+      font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 8px 16px;
       border-radius: 30px;
       transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 0 20px rgba(0,255,255,0.25);
+      box-shadow: 0 0 20px rgba(0,255,255,0.3);
       white-space: nowrap;
     }
 
     #pweb-cta:hover {
       transform: scale(1.06);
-      box-shadow: 0 0 28px rgba(168,85,247,0.45);
+      box-shadow: 0 0 30px rgba(168,85,247,0.5);
     }
 
     #pweb-cta svg {
       width: 13px; height: 13px; fill: #000;
     }
 
+    /* Partículas decorativas */
     .pweb-dot {
       position: absolute;
       border-radius: 50%;
@@ -174,7 +159,7 @@
     .pweb-dot-1 {
       width: 5px; height: 5px;
       background: #0ff;
-      top: 60px; left: 130px;
+      top: 60px; left: 120px;
       box-shadow: 0 0 8px #0ff;
       animation: pwebPulse 2s ease-in-out infinite;
     }
@@ -182,7 +167,7 @@
     .pweb-dot-2 {
       width: 3px; height: 3px;
       background: #a855f7;
-      top: 90px; left: 210px;
+      top: 80px; left: 200px;
       box-shadow: 0 0 6px #a855f7;
       animation: pwebPulse 2.5s ease-in-out infinite 0.5s;
     }
@@ -190,7 +175,7 @@
     .pweb-dot-3 {
       width: 4px; height: 4px;
       background: #0ff;
-      top: 110px; left: 165px;
+      top: 100px; left: 160px;
       box-shadow: 0 0 7px #0ff;
       animation: pwebPulse 1.8s ease-in-out infinite 1s;
     }
@@ -202,26 +187,26 @@
   `;
   document.head.appendChild(style);
 
-  // Logo otromundo (icono de planeta/órbita)
-  const logoMark = (id) => `
-    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
-      <defs>
-        <linearGradient id="${id}" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#00ffff"/>
-          <stop offset="100%" stop-color="#a855f7"/>
-        </linearGradient>
-      </defs>
-      <circle cx="20" cy="20" r="18" fill="none" stroke="url(#${id})" stroke-width="2"/>
-      <circle cx="20" cy="20" r="5" fill="url(#${id})"/>
-      <line x1="20" y1="2"  x2="20" y2="10" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="20" y1="30" x2="20" y2="38" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="2"  y1="20" x2="10" y2="20" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="30" y1="20" x2="38" y2="20" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="5.5"  y1="5.5"  x2="11.5" y2="11.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="28.5" y1="28.5" x2="34.5" y2="34.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="34.5" y1="5.5"  x2="28.5" y2="11.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="11.5" y1="28.5" x2="5.5"  y2="34.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>`;
+  // Ícono de código para el thumb
+  const codeIcon = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 6L2 12L8 18" stroke="url(#ig1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 6L22 12L16 18" stroke="url(#ig2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 3L10 21" stroke="url(#ig3)" stroke-width="2.5" stroke-linecap="round"/>
+    <defs>
+      <linearGradient id="ig1" x1="2" y1="12" x2="8" y2="12" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00ffff"/>
+        <stop offset="1" stop-color="#a855f7"/>
+      </linearGradient>
+      <linearGradient id="ig2" x1="16" y1="12" x2="22" y2="12" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00ffff"/>
+        <stop offset="1" stop-color="#a855f7"/>
+      </linearGradient>
+      <linearGradient id="ig3" x1="10" y1="3" x2="14" y2="21" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00ffff"/>
+        <stop offset="1" stop-color="#a855f7"/>
+      </linearGradient>
+    </defs>
+  </svg>`;
 
   // Ícono WhatsApp
   const wppIcon = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -234,28 +219,31 @@
 
     wrap.innerHTML = `
       <!-- Triángulo de fondo -->
-      <svg id="pweb-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <svg id="pweb-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <defs>
           <linearGradient id="pwebGrad" x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%"   stop-color="#060818"/>
-            <stop offset="60%"  stop-color="#0d1030"/>
-            <stop offset="100%" stop-color="#120830"/>
+            <stop offset="100%" stop-color="#0d1030"/>
           </linearGradient>
           <linearGradient id="pwebEdge" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%"   stop-color="#00ffff" stop-opacity="0.9"/>
+            <stop offset="0%"   stop-color="#00ffff" stop-opacity="0.8"/>
             <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
           </linearGradient>
           <linearGradient id="pwebGlow" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%"   stop-color="#00ffff" stop-opacity="0.07"/>
-            <stop offset="100%" stop-color="#a855f7" stop-opacity="0.04"/>
+            <stop offset="0%"   stop-color="#00ffff" stop-opacity="0.06"/>
+            <stop offset="100%" stop-color="#a855f7" stop-opacity="0.03"/>
           </linearGradient>
         </defs>
-        <polygon points="320,320 0,0 0,320" fill="url(#pwebGrad)"/>
-        <polygon points="320,320 0,0 0,320" fill="url(#pwebGlow)"/>
-        <line x1="320" y1="320" x2="0" y2="0" stroke="url(#pwebEdge)" stroke-width="1.5"/>
-        <line x1="0" y1="210" x2="110" y2="320" stroke="rgba(0,255,255,0.05)" stroke-width="1"/>
-        <line x1="0" y1="160" x2="160" y2="320" stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
-        <line x1="0" y1="110" x2="210" y2="320" stroke="rgba(0,255,255,0.04)" stroke-width="1"/>
+        <!-- Triángulo principal -->
+        <polygon points="300,300 0,0 0,300" fill="url(#pwebGrad)"/>
+        <!-- Capa de brillo -->
+        <polygon points="300,300 0,0 0,300" fill="url(#pwebGlow)"/>
+        <!-- Borde degradado cyan→violeta -->
+        <line x1="300" y1="300" x2="0" y2="0" stroke="url(#pwebEdge)" stroke-width="1.5"/>
+        <!-- Grid lines decorativas sutiles -->
+        <line x1="0" y1="200" x2="100" y2="300" stroke="rgba(0,255,255,0.05)" stroke-width="1"/>
+        <line x1="0" y1="150" x2="150" y2="300" stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
+        <line x1="0" y1="100" x2="200" y2="300" stroke="rgba(0,255,255,0.04)" stroke-width="1"/>
       </svg>
 
       <!-- Partículas -->
@@ -263,17 +251,13 @@
       <div class="pweb-dot pweb-dot-2"></div>
       <div class="pweb-dot pweb-dot-3"></div>
 
-      <!-- Thumb cerrado: logo -->
-      <div id="pweb-thumb">${logoMark('lgThumb')}</div>
+      <!-- Thumb cerrado -->
+      <div id="pweb-thumb">${codeIcon}</div>
 
       <!-- Contenido expandido -->
       <div id="pweb-content">
-        <div id="pweb-logo-row">
-          <div style="width:26px;height:26px;">${logoMark('lgContent')}</div>
-          <div id="pweb-brand-name">otromundo</div>
-        </div>
-        <div id="pweb-badge">✦ Páginas Web</div>
-        <div id="pweb-headline">Tu <span>sitio web</span> a precios accesibles</div>
+        <div id="pweb-badge">✦ Servicio</div>
+        <div id="pweb-headline">Hacemos tu <span>página web</span> a precios accesibles</div>
         <div id="pweb-sub">Diseño profesional, rápido y a tu medida. Consultá sin compromiso.</div>
         <a id="pweb-cta" href="${WPP_URL}" target="_blank" rel="noopener">
           ${wppIcon}
@@ -293,10 +277,11 @@
 
     function open()  { if (!isOpen) { isOpen = true;  wrap.classList.add('open'); } }
     function close() { if (isOpen)  { isOpen = false; wrap.classList.remove('open'); } }
+    function toggle() { isOpen ? close() : open(); }
 
     wrap.addEventListener('click', function(e) {
       if (e.target.closest('#pweb-cta')) return;
-      isOpen ? close() : open();
+      toggle();
     });
 
     wrap.addEventListener('mouseenter', open);
