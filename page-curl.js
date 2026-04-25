@@ -9,6 +9,8 @@
   const WPP_MSG = encodeURIComponent('Hola! Vi que hacen páginas web, me gustaría saber más 🚀');
   const WPP_URL = 'https://wa.me/' + WPP_NUM + '?text=' + WPP_MSG;
 
+  const LOGO_B64 = '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';
+
   const style = document.createElement('style');
   style.textContent = `
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
@@ -48,10 +50,17 @@
     #pweb-thumb {
       position: absolute;
       bottom: 18px; left: 18px;
-      width: 58px; height: 58px;
+      width: 62px; height: 62px;
       display: flex; align-items: center; justify-content: center;
       transition: opacity 0.2s;
       pointer-events: none;
+    }
+
+    #pweb-thumb img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(0,255,255,0.6));
+      opacity: 0.9;
     }
 
     #pweb-wrap.open #pweb-thumb { opacity: 0; }
@@ -162,7 +171,15 @@
 
     .pweb-check { width: 14px; height: 14px; flex-shrink: 0; }
 
-    #pweb-logo-row { display: flex; align-items: center; gap: 9px; margin-bottom: 2px; }
+    #pweb-logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 2px; }
+
+    #pweb-logo-img {
+      width: 36px; height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+      filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(0,255,255,0.5));
+      opacity: 0.9;
+    }
 
     #pweb-brand-name {
       font-family: 'Space Grotesk', sans-serif;
@@ -245,26 +262,6 @@
   `;
   document.head.appendChild(style);
 
-  const logoMark = (id) => `
-    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
-      <defs>
-        <linearGradient id="${id}" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#00ffff"/>
-          <stop offset="100%" stop-color="#a855f7"/>
-        </linearGradient>
-      </defs>
-      <circle cx="20" cy="20" r="18" fill="none" stroke="url(#${id})" stroke-width="2"/>
-      <circle cx="20" cy="20" r="5" fill="url(#${id})"/>
-      <line x1="20" y1="2"  x2="20" y2="10" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="20" y1="30" x2="20" y2="38" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="2"  y1="20" x2="10" y2="20" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="30" y1="20" x2="38" y2="20" stroke="url(#${id})" stroke-width="2" stroke-linecap="round"/>
-      <line x1="5.5"  y1="5.5"  x2="11.5" y2="11.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="28.5" y1="28.5" x2="34.5" y2="34.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="34.5" y1="5.5"  x2="28.5" y2="11.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="11.5" y1="28.5" x2="5.5"  y2="34.5" stroke="url(#${id})" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>`;
-
   const checkSVG = `<svg class="pweb-check" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="7" cy="7" r="6.5" stroke="#00ffff" stroke-opacity="0.4"/>
     <path d="M4 7l2 2 4-4" stroke="#00ffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -301,14 +298,16 @@
       <div class="pweb-dot pweb-dot-3"></div>
       <div class="pweb-dot pweb-dot-4"></div>
 
-      <div id="pweb-thumb">${logoMark('lgThumb')}</div>
+      <div id="pweb-thumb">
+        <img src="data:image/jpeg;base64,${LOGO_B64}" alt="logo" />
+      </div>
 
       <button id="pweb-close">✕</button>
 
       <div id="pweb-content">
         <div id="pweb-left">
           <div id="pweb-logo-row">
-            <div style="width:30px;height:30px;flex-shrink:0;">${logoMark('lgContent')}</div>
+            <img id="pweb-logo-img" src="data:image/jpeg;base64,${LOGO_B64}" alt="logo" />
             <div id="pweb-brand-name">otromundo</div>
           </div>
           <div id="pweb-badge">✦ Agencia de Páginas Web</div>
