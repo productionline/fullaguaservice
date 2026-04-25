@@ -115,17 +115,30 @@
     const wrap = buildWrap();
     document.body.appendChild(wrap);
     let isOpen = false;
+    let userInteracted = false;
+
     function open()  { if (!isOpen) { isOpen = true;  wrap.classList.add('open'); } }
     function close() { if (isOpen)  { isOpen = false; wrap.classList.remove('open'); } }
+
     wrap.addEventListener('click', function(e) {
       if (e.target.closest('#pweb-cta') || e.target.closest('#pweb-close')) return;
+      userInteracted = true;
       isOpen ? close() : open();
     });
-    document.getElementById('pweb-close').addEventListener('click', function(e) { e.stopPropagation(); close(); });
-    wrap.addEventListener('mouseenter', open);
-    wrap.addEventListener('mouseleave', function(e) { if (!e.relatedTarget || !wrap.contains(e.relatedTarget)) close(); });
-    // Auto-abrir a los 9 segundos
-    setTimeout(open, 9000);
+    document.getElementById('pweb-close').addEventListener('click', function(e) {
+      e.stopPropagation();
+      userInteracted = true;
+      close();
+    });
+    wrap.addEventListener('mouseenter', function() { userInteracted = true; open(); });
+    wrap.addEventListener('mouseleave', function(e) {
+      if (!e.relatedTarget || !wrap.contains(e.relatedTarget)) close();
+    });
+
+    // Auto-abrir a los 9 segundos solo si el usuario no interactuó antes
+    setTimeout(function() {
+      if (!userInteracted) open();
+    }, 9000);
 
     if ('IntersectionObserver' in window) {
       const sentinel = document.createElement('div');
