@@ -15,15 +15,14 @@
 
     #pweb-wrap {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 130px;
-      height: 130px;
+      bottom: 0; left: 0;
+      width: 130px; height: 130px;
       z-index: 9998;
       cursor: pointer;
       filter: drop-shadow(6px -6px 18px rgba(0,0,0,0.5));
       transition: width 0.55s cubic-bezier(0.4,0,0.2,1),
                   height 0.55s cubic-bezier(0.4,0,0.2,1);
+      overflow: hidden;
     }
 
     #pweb-wrap.open {
@@ -31,28 +30,31 @@
       height: min(480px, 90vh);
     }
 
+    #pweb-bg {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #060818;
+      clip-path: polygon(100% 100%, 0 0, 0 100%);
+    }
+
     #pweb-svg {
       position: absolute;
       bottom: 0; left: 0;
       width: 100%; height: 100%;
+      pointer-events: none;
     }
 
     #pweb-thumb {
       position: absolute;
-      bottom: 18px;
-      left: 18px;
-      width: 58px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      bottom: 18px; left: 18px;
+      width: 58px; height: 58px;
+      display: flex; align-items: center; justify-content: center;
       transition: opacity 0.2s;
       pointer-events: none;
     }
 
-    #pweb-wrap.open #pweb-thumb {
-      opacity: 0;
-    }
+    #pweb-wrap.open #pweb-thumb { opacity: 0; }
 
     #pweb-close {
       position: absolute;
@@ -74,15 +76,8 @@
       user-select: none;
     }
 
-    #pweb-wrap.open #pweb-close {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    #pweb-close:hover {
-      background: rgba(255,255,255,0.18);
-      color: #fff;
-    }
+    #pweb-wrap.open #pweb-close { opacity: 1; pointer-events: auto; }
+    #pweb-close:hover { background: rgba(255,255,255,0.18); color: #fff; }
 
     #pweb-content {
       position: absolute;
@@ -95,13 +90,9 @@
       pointer-events: none;
       transition: opacity 0.3s ease 0.25s;
       box-sizing: border-box;
-      overflow: hidden;
     }
 
-    #pweb-wrap.open #pweb-content {
-      opacity: 1;
-      pointer-events: auto;
-    }
+    #pweb-wrap.open #pweb-content { opacity: 1; pointer-events: auto; }
 
     #pweb-left {
       flex: 1;
@@ -117,22 +108,20 @@
     }
 
     #pweb-right {
-      width: 210px;
+      width: 220px;
       flex-shrink: 0;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      padding: 28px 22px 32px 8px;
+      padding: 28px 22px 32px 12px;
       position: relative;
       z-index: 2;
       box-sizing: border-box;
+      background: linear-gradient(135deg, rgba(13,16,48,0.97) 0%, rgba(18,8,48,0.97) 100%);
+      border-left: 1px solid rgba(0,255,255,0.1);
     }
 
     #pweb-price-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(0,255,255,0.2);
-      border-radius: 16px;
-      padding: 20px 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -144,209 +133,105 @@
 
     .pweb-price-tag {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.55rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+      font-size: 0.55rem; letter-spacing: 3px; text-transform: uppercase;
       color: rgba(255,255,255,0.4);
     }
 
     .pweb-price-amount {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 700;
+      font-size: 3rem; font-weight: 700;
       background: linear-gradient(90deg, #00ffff, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1;
     }
 
     .pweb-price-period {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.65rem;
-      color: rgba(255,255,255,0.35);
-      margin-top: -6px;
+      font-size: 0.65rem; color: rgba(255,255,255,0.35); margin-top: -6px;
     }
 
-    .pweb-price-divider {
-      width: 40px; height: 1px;
-      background: rgba(0,255,255,0.2);
-    }
+    .pweb-price-divider { width: 40px; height: 1px; background: rgba(0,255,255,0.25); }
 
-    .pweb-price-items {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      width: 100%;
-    }
+    .pweb-price-items { display: flex; flex-direction: column; gap: 8px; width: 100%; }
 
     .pweb-price-item {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.68rem;
-      color: rgba(255,255,255,0.6);
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      text-align: left;
+      font-size: 0.7rem; color: rgba(255,255,255,0.7);
+      display: flex; align-items: center; gap: 7px; text-align: left;
     }
 
-    .pweb-check {
-      width: 14px; height: 14px;
-      flex-shrink: 0;
-    }
+    .pweb-check { width: 14px; height: 14px; flex-shrink: 0; }
 
-    #pweb-logo-row {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      margin-bottom: 2px;
-    }
+    #pweb-logo-row { display: flex; align-items: center; gap: 9px; margin-bottom: 2px; }
 
     #pweb-brand-name {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-size: 1.35rem; font-weight: 700; letter-spacing: 2px;
       background: linear-gradient(90deg, #00ffff, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1;
     }
 
     #pweb-badge {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.5rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #0ff;
-      background: rgba(0,255,255,0.1);
-      border: 1px solid rgba(0,255,255,0.3);
-      border-radius: 20px;
-      padding: 3px 11px;
-      display: inline-block;
-      width: fit-content;
+      font-size: 0.5rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      color: #0ff; background: rgba(0,255,255,0.1); border: 1px solid rgba(0,255,255,0.3);
+      border-radius: 20px; padding: 3px 11px; display: inline-block; width: fit-content;
     }
 
     #pweb-headline {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-      font-weight: 700;
-      line-height: 1.25;
-      color: #fff;
-      max-width: 300px;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-weight: 700; line-height: 1.25;
+      color: #fff; max-width: 300px;
     }
 
     #pweb-headline span {
       background: linear-gradient(90deg, #0ff, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
 
     #pweb-sub {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.55);
-      line-height: 1.55;
-      max-width: 280px;
+      font-size: 0.75rem; color: rgba(255,255,255,0.55); line-height: 1.55; max-width: 280px;
     }
 
-    .pweb-features {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
+    .pweb-features { display: flex; flex-direction: column; gap: 6px; }
 
     .pweb-feat {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: flex; align-items: center; gap: 8px;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.72rem;
-      color: rgba(255,255,255,0.7);
+      font-size: 0.72rem; color: rgba(255,255,255,0.7);
     }
 
     .pweb-feat-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00ffff, #a855f7);
-      flex-shrink: 0;
+      width: 6px; height: 6px; border-radius: 50%;
+      background: linear-gradient(135deg, #00ffff, #a855f7); flex-shrink: 0;
     }
 
     #pweb-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      background: linear-gradient(135deg, #0ff 0%, #a855f7 100%);
-      color: #000;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      padding: 11px 22px;
-      border-radius: 30px;
+      display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      background: linear-gradient(135deg, #0ff 0%, #a855f7 100%); color: #000;
+      font-family: 'Space Grotesk', sans-serif; font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase; padding: 11px 22px; border-radius: 30px;
       transition: transform 0.2s, box-shadow 0.2s;
       box-shadow: 0 0 24px rgba(0,255,255,0.2);
-      white-space: nowrap;
-      width: fit-content;
-      margin-top: 4px;
+      white-space: nowrap; width: fit-content; margin-top: 4px;
     }
 
-    #pweb-cta:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 34px rgba(168,85,247,0.4);
-    }
-
-    #pweb-cta svg {
-      width: 14px; height: 14px;
-      fill: #000;
-      flex-shrink: 0;
-    }
+    #pweb-cta:hover { transform: scale(1.05); box-shadow: 0 0 34px rgba(168,85,247,0.4); }
+    #pweb-cta svg { width: 14px; height: 14px; fill: #000; flex-shrink: 0; }
 
     .pweb-dot {
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s ease 0.4s;
+      position: absolute; border-radius: 50%; pointer-events: none;
+      opacity: 0; transition: opacity 0.3s ease 0.4s;
     }
 
-    #pweb-wrap.open .pweb-dot {
-      opacity: 1;
-    }
+    #pweb-wrap.open .pweb-dot { opacity: 1; }
 
-    .pweb-dot-1 {
-      width: 6px; height: 6px;
-      background: #0ff;
-      top: 55px; left: 170px;
-      box-shadow: 0 0 10px #0ff;
-      animation: pwebPulse 2s ease-in-out infinite;
-    }
-    .pweb-dot-2 {
-      width: 4px; height: 4px;
-      background: #a855f7;
-      top: 100px; left: 310px;
-      box-shadow: 0 0 7px #a855f7;
-      animation: pwebPulse 2.6s ease-in-out infinite 0.5s;
-    }
-    .pweb-dot-3 {
-      width: 5px; height: 5px;
-      background: #0ff;
-      top: 130px; left: 230px;
-      box-shadow: 0 0 9px #0ff;
-      animation: pwebPulse 1.9s ease-in-out infinite 1s;
-    }
-    .pweb-dot-4 {
-      width: 3px; height: 3px;
-      background: #a855f7;
-      top: 80px; left: 400px;
-      box-shadow: 0 0 6px #a855f7;
-      animation: pwebPulse 3s ease-in-out infinite 0.3s;
-    }
+    .pweb-dot-1 { width: 6px; height: 6px; background: #0ff; top: 55px; left: 170px; box-shadow: 0 0 10px #0ff; animation: pwebPulse 2s ease-in-out infinite; }
+    .pweb-dot-2 { width: 4px; height: 4px; background: #a855f7; top: 100px; left: 310px; box-shadow: 0 0 7px #a855f7; animation: pwebPulse 2.6s ease-in-out infinite 0.5s; }
+    .pweb-dot-3 { width: 5px; height: 5px; background: #0ff; top: 130px; left: 230px; box-shadow: 0 0 9px #0ff; animation: pwebPulse 1.9s ease-in-out infinite 1s; }
+    .pweb-dot-4 { width: 3px; height: 3px; background: #a855f7; top: 80px; left: 380px; box-shadow: 0 0 6px #a855f7; animation: pwebPulse 3s ease-in-out infinite 0.3s; }
 
     @keyframes pwebPulse {
       0%, 100% { transform: scale(1); opacity: 0.6; }
@@ -354,13 +239,8 @@
     }
 
     @media (max-width: 500px) {
-      #pweb-wrap.open {
-        width: 98vw;
-        height: 92vh;
-      }
-      #pweb-right {
-        display: none;
-      }
+      #pweb-wrap.open { width: 98vw; height: 92vh; }
+      #pweb-right { display: none; }
     }
   `;
   document.head.appendChild(style);
@@ -399,26 +279,17 @@
     wrap.id = 'pweb-wrap';
 
     wrap.innerHTML = `
+      <div id="pweb-bg"></div>
+
       <svg id="pweb-svg" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
         <defs>
-          <linearGradient id="pwebGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%"   stop-color="#060818"/>
-            <stop offset="60%"  stop-color="#0d1030"/>
-            <stop offset="100%" stop-color="#120830"/>
-          </linearGradient>
           <linearGradient id="pwebEdge" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%"   stop-color="#00ffff" stop-opacity="0.9"/>
             <stop offset="100%" stop-color="#a855f7" stop-opacity="0.1"/>
           </linearGradient>
-          <linearGradient id="pwebGlow" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%"   stop-color="#00ffff" stop-opacity="0.06"/>
-            <stop offset="100%" stop-color="#a855f7" stop-opacity="0.03"/>
-          </linearGradient>
         </defs>
-        <polygon points="680,480 0,0 0,480" fill="url(#pwebGrad)"/>
-        <polygon points="680,480 0,0 0,480" fill="url(#pwebGlow)"/>
         <line x1="680" y1="480" x2="0" y2="0" stroke="url(#pwebEdge)" stroke-width="1.5"/>
-        <line x1="0" y1="350" x2="130" y2="480" stroke="rgba(0,255,255,0.05)" stroke-width="1"/>
+        <line x1="0" y1="350" x2="130" y2="480" stroke="rgba(0,255,255,0.06)" stroke-width="1"/>
         <line x1="0" y1="260" x2="220" y2="480" stroke="rgba(168,85,247,0.05)" stroke-width="1"/>
         <line x1="0" y1="170" x2="310" y2="480" stroke="rgba(0,255,255,0.04)" stroke-width="1"/>
         <line x1="0" y1="380" x2="680" y2="85"  stroke="rgba(0,255,255,0.04)" stroke-width="1"/>
